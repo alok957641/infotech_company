@@ -6,17 +6,22 @@ a:hover {
 }
 
 
-/* Force scroll on mobile */
-html, body {
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  height: auto !important;
-  -webkit-overflow-scrolling: touch; /* iOS par smooth scroll ke liye */
-  touch-action: auto !important; /* Touch blocks hatane ke liye */
+
+/* Sabse Important: Ye kisi bhi element ko scroll rokne nahi dega */
+* {
+  touch-action: pan-y !important;
 }
 
+html, body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  height: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* App wrapper fix */
 #root {
- min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
 }

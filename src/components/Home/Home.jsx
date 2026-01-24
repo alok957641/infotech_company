@@ -25,7 +25,7 @@ export default function Home() {
     >
       {/* GRID ANIMATION – DESKTOP ONLY */}
       {!isMobile && (
-        <div className="absolute inset-0 pointer-events-none z-0">
+       <div className="hidden md:block absolute inset-0 pointer-events-none z-0">
           <GridScan
             sensitivity={0.55}
             lineThickness={1}
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       )}
 
-      {/* CONTENT - Iska z-index background se upar hona chahiye */}
+     
       <div className="relative z-20 w-full py-20">
         <div className="max-w-3xl mx-auto px-6 text-center text-white">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">

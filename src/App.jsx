@@ -12,7 +12,7 @@ import Footer from "./components/Footer/Footer"
 
 function App() {
   return (
-   <div className="w-full min-h-screen overflow-y-auto overflow-x-hidden">
+   <div className="w-full min-h-screen overflow-x-hidden relative">
       <Navbar />
       <Home />
       <About />
