@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+a:hover {
+  color: chocolate;
+  animation-duration: 3s;
+}
+
+
+/* Force scroll on mobile */
+html, body {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  height: auto !important;
+  -webkit-overflow-scrolling: touch; /* iOS par smooth scroll ke liye */
+  touch-action: auto !important; /* Touch blocks hatane ke liye */
+}
+
+#root {
+ min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
