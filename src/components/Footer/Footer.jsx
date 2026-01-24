@@ -1,53 +1,68 @@
 import footerimg from "../../assets/FOOTER.webp";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="">
-      <div className="bg-[#0F172A] flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row md:py-9 md:gap-8 justify-between md:items-center  gap-12 md:py-0 py-5 px-8 min-h-80 md:px-12">
-        <div>
-          <p className="text-6xl font-bold text-blue-700">
+    <footer className="w-full bg-black relative overflow-hidden">
+      
+      {/* Top Footer */}
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-10 p-8 lg:p-12">
+        
+        {/* Logo + Description */}
+        <div className="flex flex-col gap-4">
+          <p className="text-5xl sm:text-6xl font-bold text-blue-700">
             Info<span className="text-red-500">Center</span>
+          </p>
+          <p className="text-gray-400 text-sm max-w-xs">
+            Leading IT solutions provider delivering innovative services to help your business grow.
           </p>
         </div>
 
-        {/* links */}
-        <div>
-          <ul className="flex flex-col md:gap-2 gap-5">
-            <li className="text-gray-400 font-semibold text-l "> <a href="">CUSTOM APPLICATION </a></li>
-            <li className="text-gray-400 font-semibold text-l "> <a href="">RADIUS </a></li>
-            <li className="text-gray-400 font-semibold text-l "> <a href="">PROFESSIONAL SERVICES </a></li>
-            <li className="text-gray-400 font-semibold text-l "> <a href="">DEVSHOP </a></li>
+        {/* Services */}
+        <div className="flex flex-col gap-4">
+          <h4 className="text-white font-bold text-lg">Services</h4>
+          <ul className="flex flex-col gap-2">
+            {["CUSTOM APPLICATION","RADIUS","PROFESSIONAL SERVICES","DEVSHOP"].map((item, i) => (
+              <li key={i} className="text-gray-400 font-medium hover:text-pink-500 transition-colors hover:drop-shadow-[0_0_10px_rgba(255,20,147,0.7)] cursor-pointer">
+                <a href="#">{item}</a>
+              </li>
+            ))}
           </ul>
         </div>
-        <div>
-          <ul className="flex flex-col md:gap-2 gap-5">
-            <li className="text-gray-400 font-semibold text-l "> <a href="">SOLUTION </a></li>
-            <li className="text-gray-400 font-semibold text-l "> <a href="">ABOUT US </a></li>
-            <li className="text-gray-400 font-semibold text-l "> <a href="">CAREERS </a></li>
+
+        {/* Company */}
+        <div className="flex flex-col gap-4">
+          <h4 className="text-white font-bold text-lg">Company</h4>
+          <ul className="flex flex-col gap-2">
+            {["SOLUTION","ABOUT US","CAREERS"].map((item, i) => (
+              <li key={i} className="text-gray-400 font-medium hover:text-pink-500 transition-colors hover:drop-shadow-[0_0_10px_rgba(255,20,147,0.7)] cursor-pointer">
+                <a href="#">{item}</a>
+              </li>
+            ))}
           </ul>
         </div>
-        <div>
-          <img src={footerimg} className="w-[300px] h-[100px] " alt="" />
+
+        {/* Footer Image */}
+        <div className="flex justify-start lg:justify-end p-2">
+          <img src={footerimg} className="w-[280px] sm:w-[300px] h-auto filter drop-shadow-[0_0_20px_rgba(125,249,255,0.5)]" alt="Footer Logo" />
         </div>
       </div>
 
-      <div className="flex md:flex-row flex-col md:justify-between justify-center items-center bg-black text-white p-4 px-8 gap-5 ">
-        <div className="order-2 md:order-1 ">
-          <p className="text-md text-center text-gray-400 ">Copyright 2026 InfoCenter. All rights reserved.</p>
+      {/* Bottom Footer */}
+      <div className="flex md:flex-row flex-col md:justify-between justify-center items-center bg-black text-white p-4 px-8 gap-5 border-t border-gray-800">
+        
+        <div className="order-2 md:order-1">
+          <p className="text-gray-400 text-sm text-center md:text-left">
+            © 2026 InfoCenter. All rights reserved.
+          </p>
         </div>
-        <div className="flex items-center gap-8 order-1 md:order-2">
-          {/* icons */}
 
-          <a href=""><FaInstagram className="text-3xl text-yellow-500" /></a>
-          <a href=""><FaFacebookF className="text-3xl text-yellow-500" /></a>
-          <a href=""><FaTwitter  className="text-3xl text-yellow-500" /></a>
-          <a href=""><FaLinkedin   className="text-3xl text-yellow-500 "/></a>
+        <div className="flex items-center gap-6 order-1 md:order-2">
+          {[FaInstagram, FaFacebookF, FaTwitter, FaLinkedin].map((Icon, i) => (
+            <a key={i} href="#" className="text-yellow-500 hover:text-pink-500 transition-colors hover:drop-shadow-[0_0_15px_rgba(255,20,147,0.8)]">
+              <Icon className="text-2xl sm:text-3xl" />
+            </a>
+          ))}
         </div>
       </div>
     </footer>

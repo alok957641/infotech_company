@@ -2,37 +2,58 @@ import aboutimg from "../../assets/aboutlgo.webp";
 
 export default function About() {
   return (
-    <section className="w-full  ">
-      <div className="w-full max-w-8xl flex flex-col lg:flex-row justify-between items-center gap-12 mx-auto p-6 ">
-        <div className="order-2 lg:order-1 flex flex-col gap-4 p-0 md:gap-6  ">
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold font-serif px-4 text-stone-700">
-            About Infocenter{" "}
-          </h2>
-          <p className="max-w-3xl mx-auto px-4 text-sm sm:text-base lg:text-lg leading-relaxed text-gray-600 font-semibold">
-            Infocenter is the Leading Pure-Play ServiceNow “Elite” Partner
-            providing Strategy, Professional, and Managed Services across the
-            Enterprise.
-          </p>
-          <p className="max-w-3xl mx-auto px-4 text-sm sm:text-base lg:text-lg leading-relaxed text-gray-600 font-semibold">
-            Our global team of certified ServiceNow experts is dedicated to
-            helping your organization overcome unique business challenges,
-            enhance operational efficiency, and drive digital transformation.
-          </p>
+    <section className="w-full bg-black py-24">
+      <div className="max-w-6xl mx-auto px-8">
+        
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          
+          {/* LEFT : TEXT */}
+          <div className="flex flex-col gap-8">
+            
+            {/* Heading */}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-white">
+              About Infocenter
+            </h2>
 
-          <p className="max-w-3xl mx-auto px-4 text-sm sm:text-base lg:text-lg leading-relaxed text-gray-600 font-semibold">
-            As the leading ServiceNow Elite Partner, we’re here to help you
-            Plan, Build, and Manage™ ServiceNow with confidence.
-          </p>
+            {/* Line */}
+            <div className="w-20 h-[2px] bg-pink-500"></div>
 
-          <div className="px-4 ">
-            <button className="border px-4 py-2 rounded-md hover:bg-red-500 duration-300 ">
-                Contect us 
-            </button>
+            {/* Paragraphs */}
+            <p className="text-gray-300 text-base lg:text-lg leading-relaxed max-w-xl">
+              Infocenter is a leading pure-play ServiceNow <span className="text-white font-semibold">Elite Partner</span> delivering
+              strategy, professional, and managed services across the enterprise.
+            </p>
+
+            <p className="text-gray-400 text-base lg:text-lg leading-relaxed max-w-xl">
+              Our global team of certified ServiceNow experts helps organizations
+              solve complex business challenges, improve operational efficiency,
+              and accelerate digital transformation.
+            </p>
+
+            <p className="text-gray-400 text-base lg:text-lg leading-relaxed max-w-xl">
+              We help you <span className="text-white font-semibold">Plan, Build, and Manage™</span> ServiceNow with confidence
+              and long-term vision.
+            </p>
+
+            {/* Button */}
+            <div>
+              <button className="mt-6 px-8 py-3 rounded-lg font-semibold
+                bg-pink-500 text-black
+                hover:bg-pink-600 transition duration-300">
+                Contact Us
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div className="order-1 lg:order-2 p-5">
-          <img className="w-[300px] " src={aboutimg} alt="" />
+          {/* RIGHT : IMAGE */}
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src={aboutimg}
+              alt="About Infocenter"
+              className="w-[260px] sm:w-[300px] lg:w-[340px]"
+            />
+          </div>
+
         </div>
       </div>
     </section>
