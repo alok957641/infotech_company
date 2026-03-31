@@ -9,8 +9,13 @@ import Reviews from "./components/Reviews/Reviews";
 import Artical from "./components/Artical/Artical";
 import Ready from "./components/Ready/Ready";
 import Footer from "./components/Footer/Footer"
+import { useSmoothScroll } from "./hooks/useSmoothScroll";
+
+
 
 function App() {
+
+  useSmoothScroll();
   return (
    <div className="w-full min-h-screen overflow-x-hidden relative">
       <Navbar />

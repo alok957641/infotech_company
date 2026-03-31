@@ -13,6 +13,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "face-api.js": "^0.20.0",
     "framer-motion": "^12.27.3",
+    "lenis": "^1.3.21",
     "motion": "^12.28.1",
     "postprocessing": "^6.38.2",
     "react": "^19.2.0",
